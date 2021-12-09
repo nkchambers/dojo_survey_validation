@@ -1,0 +1,22 @@
+@* Declare model for this view (aka ViewModel) to be of type Ninja *@
+@model dojo_survey_validation.Models.Ninja;
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dojo Survey_Validation</title>
+    </head>
+    <body>
+        <h1>Submitted Info</h1>
+
+        <p>Name: @Model.NinjaName</p>
+        <p>Dojo Location: @Model.DojoLocation</p>
+        <p>Favorite Language: @Model.FavoriteLanguage</p>
+        <p>Comment: @Model.Comment</p>
+
+        <a href="return_home"><button>Go Back</button></a>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+@model dojo_survey_validation.Models.Ninja
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey_Validation</title>
+</head>
+<body>
+    <h1>Dojo Survey Form</h1>
+    
+    <div id="container">
+
+        <form asp-action="NewNinja" method="POST">
+            <div>
+                <span asp-validation-for="NinjaName"></span>
+                <label asp-for="NinjaName"></label>
+                <input asp-for="NinjaName" style="margin-left: 58px;"> 
+            </div>
+            
+            <div>
+                <span asp-validation-for="DojoLocation"></span>
+                <label asp-for="DojoLocation"></label>
+                <select asp-for="DojoLocation" style="margin-left: 38px;">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Boise">Boise</option>
+                    <option value="Burbank">Burbank</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+            </div>
+            
+            <div>
+                <span asp-validation-for="FavoriteLanguage"></span>
+                <label asp-for="FavoriteLanguage"></label>
+                <select asp-for="FavoriteLanguage" style="margin-left: 10px;">
+                    <option value="HTML/CSS">HTML/CSS</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="C#">C#</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+
+            <div>
+                <span asp-validation-for="Comment"></span>
+                <label asp-for="Comment"></label><br>
+                <textarea asp-for="Comment" rows="4" cols="50"></textarea> 
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
