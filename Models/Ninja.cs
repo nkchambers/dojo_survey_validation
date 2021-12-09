@@ -12,14 +12,17 @@ namespace dojo_survey_validation.Models
 
 
         [Display(Name = "Dojo Location: ")]
+        [Required]
         public string DojoLocation { get; set; }
 
 
         [Display(Name = "Favorite Language: ")]
+        [Required]
         public string FavoriteLanguage  { get; set; }
 
 
         [Display(Name = "Comment (optional): ")]
+        [MinLength(2, ErrorMessage = "Comments must be at least 20 characters long.")]
         public string Comment { get; set; }
 
 
